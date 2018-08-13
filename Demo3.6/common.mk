@@ -4,9 +4,9 @@
 
 CUR_SUB_DIR := $(shell pwd)
 
-OBJS_DIR := /home/illidan/makefile/Demo3.6/Objs
+OBJS_DIR := $(BUILD_ROOT)/Objs
 $(shell mkdir -p $(OBJS_DIR))
-DEPS_DIR := /home/illidan/makefile/Demo3.6/Deps
+DEPS_DIR := $(BUILD_ROOT)/Deps
 $(shell mkdir -p $(DEPS_DIR))
 
 #  ---------- Vars

@@ -53,7 +53,7 @@ $(BIN_OBJS_DIR)/%.o:%.c
 	gcc -I$(BIN_INCS_DIR) -o $@ -c $(filter %.c, $^)
 
 $(LIB):$(OBJS)
-	ar rcs $@ $^
+	ar rcs -o $@ $^
 
 $(BIN):$(ALL_OBJS) $(ALL_LIBS)
 	gcc -o $@ $^ -L$(BIN_LIBS_DIR) $(ALL_LIBS_NAME) 

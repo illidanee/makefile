@@ -62,7 +62,7 @@ $(BIN_OBJS_DIR)/%.o:%.c
 	gcc -I$(BIN_INCS_DIR) -I$(EXT_INCS_DIR) $(DLL_FLAG) -o $@ -c $(filter %.c, $^)
 
 $(LIB):$(OBJS)
-	ar rcs $@ $^
+	ar rcs -o $@ $^
 
 $(DLL):$(OBJS)
 	gcc -shared -o $@ $^
